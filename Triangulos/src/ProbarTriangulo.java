@@ -43,20 +43,15 @@ public class ProbarTriangulo {
         acceder desde otra clase a una variable la declaramos como private*/
 
 
-        //Mientras la opción elegida sea 0, preguntamos al usuario
         while (select != 0) {
-            //Try catch para evitar que el programa termine si hay un error
             try {
                 System.out.println("Elige opción:\n1.- Crear triangulo isosceles" +
                         "\n2.- Crear triangulo equilatero\n" +
                         "3.- Crear triangulo escaleno\n" +
                         "4.- Contents\n" +
-                        "5.- activ 6\n" +
                         "0.- Salir");
-                //Recoger una variable por consola
                 select = Integer.parseInt(scanner.nextLine());
 
-                //Ejemplo de switch case en Java
                 switch (select) {
                     case 1:
                         isosceles(trianguloArrayList);
@@ -84,7 +79,7 @@ public class ProbarTriangulo {
                         break;
                 }
 
-                System.out.println("\n"); //Mostrar un salto de línea en Java
+                System.out.println("\n");
 
             } catch (Exception e) {
                 System.out.println("Uoop! Error!");
@@ -111,12 +106,12 @@ public class ProbarTriangulo {
 
 
         if (!iso1.equals(iso2) && !iso1.equals(iso3)) {
-            System.out.println("hit");
             Escaleno triEsca1 = new Escaleno();
             triEsca1.setLado1(li1);
             triEsca1.setLado2(li2);
             triEsca1.setLado3(li3);
             trianguloArrayList.add(triEsca1);
+            System.out.println("El perímetro del triangulo escaleno introducido es de: "+triEsca1.Perimetro(iso1,iso2,iso3));
 
         } else {
             System.out.println("Si quieres crear un triangulo escaleno todos los lados deben ser diferentes");
@@ -124,7 +119,7 @@ public class ProbarTriangulo {
         if (trianguloArrayList.size() == 0) {
             System.out.println("El array de triangulos escalenos está vacío");
         } else {
-            System.out.println("Todos los triangulos escalenos existentes--> " + trianguloArrayList.toString());
+            System.out.println("Triangulo creado correctamente " );
         }
 
 
@@ -154,6 +149,8 @@ public class ProbarTriangulo {
             triIsos1.setLado2(li2);
             triIsos1.setLado3(li3);
             trianguloArrayList.add(triIsos1);
+            System.out.println("El perímetro del triangulo escaleno introducido es de: "+triIsos1.Perimetro(iso1,iso2,iso3));
+
 
         } else {
             System.out.println("Si quieres crear un triangulo isosceles solamente dos lados deben ser iguales");
@@ -161,7 +158,7 @@ public class ProbarTriangulo {
         if (trianguloArrayList.size() == 0) {
             System.out.println("El array de triangulos isosceles está vacío");
         } else {
-            System.out.println("Todos los triangulos isosceles existentes--> " + trianguloArrayList.toString());
+            System.out.println("Triangulo creado correctamente " );
         }
     }
 
@@ -188,13 +185,15 @@ public class ProbarTriangulo {
             triEqui1.setLado3(l3);
             triEqui1.getTipo();
             trianguloArrayList.add(triEqui1);
+            System.out.println("El perímetro del triangulo escaleno introducido es de: "+triEqui1.Perimetro(equi1,equi2,equi3));
+
         } else {
             System.out.println("Si quieres crear un triangulo equilatero todos los lados deben ser iguales");
         }
         if (trianguloArrayList.size() == 0) {
             System.out.println("El array de triangulos equilateros está vacío");
         } else {
-            System.out.println("Todos los triangulos equilateros existentes--> " + trianguloArrayList.toString());
+            System.out.println("Triangulo creado correctamente " );
         }
     }
 }
