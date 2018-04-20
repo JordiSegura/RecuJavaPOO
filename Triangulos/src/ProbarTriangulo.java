@@ -72,9 +72,7 @@ public class ProbarTriangulo {
                         System.out.println(trianguloArrayList.toString());
 
                         break;
-                    case 5:
-
-                        break;
+                   
                     case 0:
                         System.out.println("Adios!");
                         break;
