@@ -3,7 +3,8 @@ public class Escaleno extends Triangulo {
 
     public Escaleno() {
         super();
-        tipo = "Excaleno";
+        tipo="Escaleno";
+
     }
 
     public String getTipo() {
@@ -16,6 +17,7 @@ public class Escaleno extends Triangulo {
 
     @Override
     public String toString() {
-        return "tipo='" + tipo + '\'';
+        return "tipo='" + tipo;
     }
+
 }

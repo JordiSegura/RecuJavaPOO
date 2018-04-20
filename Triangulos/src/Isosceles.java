@@ -1,10 +1,10 @@
 public class Isosceles extends Triangulo{
     private String tipo;
 
-
     public Isosceles() {
         super();
-        tipo = "Isosceles";
+        tipo="Isosceles";
+
     }
 
     public String getTipo() {
@@ -17,6 +17,6 @@ public class Isosceles extends Triangulo{
 
     @Override
     public String toString() {
-        return "tipo='" + tipo + '\'';
+        return "tipo='" + tipo;
     }
 }
